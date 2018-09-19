@@ -1,6 +1,8 @@
 const express = require('express')
+const compression = require('compression')
 const app = express()
 
+app.use(compression())
 app.get('/', function (req, res) {
   res.send('Hello World of Azure!')
 })
